@@ -82,8 +82,8 @@ check_theme <- function(theme, available_themes) {
 call_api_base <- function(geolevel = "national") {
   
   # Call
-  if (geolevel == "national") res <- httr::GET("https://opendata.swiss/api/3/action/package_show?id=echtzeitdaten-am-abstimmungstag-zu-eidgenoessischen-abstimmungsvorlagen")
-  if (geolevel == "canton") res <- httr::GET("https://opendata.swiss/api/3/action/package_show?id=echtzeitdaten-am-abstimmungstag-zu-kantonalen-abstimmungsvorlagen")
+  if (geolevel == "national") res <- httr::GET("https://ckan.opendata.swiss/api/3/action/package_show?id=echtzeitdaten-am-abstimmungstag-zu-eidgenoessischen-abstimmungsvorlagen")
+  if (geolevel == "canton") res <- httr::GET("https://ckan.opendata.swiss/api/3/action/package_show?id=echtzeitdaten-am-abstimmungstag-zu-kantonalen-abstimmungsvorlagen")
   
   # Check
   check_api_call(res)
@@ -99,7 +99,7 @@ call_api_base <- function(geolevel = "national") {
 call_api_geodata <- function(){
   
   # Call
-  res <- httr::GET("https://opendata.swiss/api/3/action/package_show?id=geodaten-zu-den-eidgenoessischen-abstimmungsvorlagen")
+  res <- httr::GET("https://ckan.opendata.swiss/api/3/action/package_show?id=geodaten-zu-den-eidgenoessischen-abstimmungsvorlagen")
   
   # Return
   return(res)
